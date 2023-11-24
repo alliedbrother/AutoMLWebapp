@@ -45419,3 +45419,19 @@ Increase the number of iterations (max_iter) or scale the data as shown in:
                                                               handle_missing='return_nan'))),
                 ('trained_model', KNeighborsRegressor(n_jobs=-1))])
 2023-11-24 18:25:17,308:INFO:save_model() successfully completed......................................
+2023-11-24 18:36:42,734:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:36:42,734:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:36:42,734:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:36:42,734:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:39:33,934:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:39:33,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:39:33,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-11-24 18:39:33,935:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
