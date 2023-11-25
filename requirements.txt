@@ -88,7 +88,7 @@ tbats==1.1.3
 tenacity==8.2.3
 toml==0.10.2
 toolz==0.12.0
-tqdm==4.66.1
+tqdm>=4.48.2, <4.65
 trace-updater==0.0.9.1
 tsdownsample==0.1.2
 typeguard==4.1.5
