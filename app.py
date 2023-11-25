@@ -5,6 +5,7 @@ import os
 from ydata_profiling import ProfileReport
 from PIL import Image
 import pandas_profiling
+import ydata_profiling
 from streamlit_pandas_profiling import st_profile_report
 import matplotlib
 import pycaret.classification as pyc 
