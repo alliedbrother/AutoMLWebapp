@@ -1,14 +1,15 @@
-import streamlit as st 
-import pandas as pd 
-import numpy as np 
-import os 
-from ydata_profiling import ProfileReport
-from PIL import Image
-
-from streamlit_pandas_profiling import st_profile_report
+from operator import index
+import streamlit as st
+from PIL import Image 
+import plotly.express as px
+import ydata_profiling
+import pandas as pd
 import matplotlib
+from streamlit_pandas_profiling import st_profile_report
+import os
 import pycaret.classification as pyc 
-import pycaret.regression as pyr 
+import pycaret.regression as pyr
+
 
 st.set_page_config(layout="wide")
 image = Image.open('aml.png')
@@ -29,6 +30,10 @@ if choice == "Upload":
         df = pd.read_csv(file,index_col=None)
         st.dataframe(df[0:25])
         df.to_csv("sourcedata.csv",index=None)
+    if os.path.exists("sourcedata.csv"):
+        df = pd.read_csv("sourcedata.csv",index_col=None)
+        st.dataframe(df[0:25])
+
 
 if choice == "Profiling":
     st.title("Explanatory Data Analysis")
@@ -43,7 +48,7 @@ if choice == "Auto ML":
         if st.button('Give Parameters'):
             pyc.setup(df, target=chosen_target) 
             setup_df = pyc.pull() 
-            st.dataframe(setup_df,use_container_width=True,hide_index=True)
+            #st.dataframe(setup_df,use_container_width=True)
         if st.button('Build Model'):
             with st.spinner("Building your Model"):
                 best_model = pyc.compare_models()
@@ -56,7 +61,7 @@ if choice == "Auto ML":
         if st.button('Give Parameters'):
             pyr.setup(df, target=chosen_target)
             setup_df = pyr.pull()
-            st.dataframe(setup_df,use_container_width=True,hide_index=True)
+            st.dataframe(setup_df,use_container_width=True)
         if st.button('Build Model'):
             with st.spinner("Building your Model"):
                 best_model = pyr.compare_models()
