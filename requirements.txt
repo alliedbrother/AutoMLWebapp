@@ -60,7 +60,7 @@ pmdarima==2.0.4
 protobuf==4.25.1
 pyarrow==14.0.1
 pycaret==3.2.0
-pydantic==2.5.2
+pydantic>=1.8.1, <1.10
 pydantic_core==2.14.5
 pydeck==0.8.1b0
 pyod==1.1.2
