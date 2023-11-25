@@ -30,10 +30,6 @@ if choice == "Upload":
         df = pd.read_csv(file,index_col=None)
         st.dataframe(df[0:25])
         df.to_csv("sourcedata.csv",index=None)
-    if os.path.exists("sourcedata.csv"):
-        df = pd.read_csv("sourcedata.csv",index_col=None)
-        st.dataframe(df[0:25])
-
 
 if choice == "Profiling":
     st.title("Explanatory Data Analysis")
